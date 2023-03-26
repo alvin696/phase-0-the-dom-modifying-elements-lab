@@ -3,10 +3,24 @@
   <head>
     <title>Creating and Inserting DOM Elements</title>
   </head>
-  <script type="application/javascript">
-  </script>
   <body>
     <main id="main"></main>
     <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript">
+      // Remove the 'main' element
+      const mainElement = document.getElementById("main");
+      mainElement.parentNode.removeChild(mainElement);
+
+      // Create a new 'h1' element with the id 'victory'
+      const newHeader = document.createElement("h1");
+      newHeader.id = "victory";
+
+      // Add text to the new 'h1' element
+      const newText = document.createTextNode("YOUR-NAME is the champion");
+      newHeader.appendChild(newText);
+
+      // Add the new 'h1' element to the document body
+      document.body.appendChild(newHeader);
+    </script>
   </body>
 </html>
